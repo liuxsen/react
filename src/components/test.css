@@ -2,5 +2,5 @@
   --body_bg_color: #eaeaea;
 }
 body {
-  background: url(./icon.jpg) no-repeat center center var(--body_bg_color);
+  background: url(./icon.jpg) no-repeat center top var(--body_bg_color);
 }

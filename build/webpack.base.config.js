@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolve = function(dir) {
   return path.resolve(__dirname, '..', dir);
 };
@@ -54,5 +56,6 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       }
     ]
-  }
+  },
+  plugins: [new HtmlWebpackPlugin(), new webpack.HotModuleReplacementPlugin()]
 };
