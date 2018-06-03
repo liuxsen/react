@@ -14,8 +14,9 @@ module.exports = {
     port: 8081
   },
   resolve: {
-    extensions: ['.jsx', '.js', '.json']
+    extensions: ['.jsx', '.ts', '.js', '.json']
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -27,6 +28,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.ts$/,
+        loader: 'awesome-typescript-loader'
       }
     ]
   }
