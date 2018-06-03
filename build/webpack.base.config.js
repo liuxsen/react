@@ -25,6 +25,26 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8000,
+              fallback: 'file-loader'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.svg/,
+        use: ['file-loader']
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
