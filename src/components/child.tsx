@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import showMe from './type.ts';
+import * as React from 'react';
+import showMe from './type';
 console.log(showMe);
 console.log('result', showMe('hello'));
 
-class Child extends Component {
+class Child extends React.Component {
   render() {
     return <div>hello word</div>;
   }

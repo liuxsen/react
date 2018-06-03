@@ -4,7 +4,7 @@ const resolve = function(dir) {
 };
 
 module.exports = {
-  entry: resolve('src/main.js'),
+  entry: resolve('src/main'),
   output: {
     path: resolve('dist'),
     filename: 'bundle.js'
@@ -14,7 +14,7 @@ module.exports = {
     port: 8081
   },
   resolve: {
-    extensions: ['.jsx', '.ts', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.jsx', '.js', '.json']
   },
   devtool: 'source-map',
   module: {
@@ -30,7 +30,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
       }
     ]

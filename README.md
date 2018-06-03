@@ -6,7 +6,7 @@ TODO
 * [x] jsx 编译
 * [x] babel 编译
 * [x] ts 预编译
-* [ ] tsx 预编译
+* [x] tsx 预编译
 * [ ] css 编译
 * [ ] DllPlugin
 * [ ] HappyPlugin
